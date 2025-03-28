@@ -7,7 +7,7 @@ export default function Footer() {
             {/* Branding */}
             <div className="flex-1">
               <a href="#" className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                YourName
+                Jesmin Chakma
               </a>
               <p className="mt-3 text-gray-600 dark:text-gray-400 max-w-xs">
                 Crafting digital excellence through clean code and innovative solutions
