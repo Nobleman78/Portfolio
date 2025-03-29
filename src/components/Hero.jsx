@@ -12,7 +12,7 @@ export default function Hero() {
                     {/* Text Content - Left Side */}
                     <div className="max-w-2xl order-2 md:order-1">
                         <h1
-                            className="text-4xl md:text-6xl font-bold mb-4 leading-tight"
+                            className="text-4xl md:text-5xl font-bold mb-4 leading-tight"
                             data-aos="fade-up"
                             data-aos-delay="100"
                         >

@@ -56,9 +56,9 @@ export default function Contact() {
             data-aos="fade-up"
         >
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+                <div className="mb-16">
                     <h2
-                        className="text-5xl font-bold mb-6 text-gray-800 dark:text-white"
+                        className="text-4xl font-bold mb-6 text-gray-800 dark:text-white"
                         data-aos="fade-up"
                         data-aos-delay="100"
                     >
@@ -67,11 +67,11 @@ export default function Contact() {
                         </span>
                     </h2>
                     <p
-                        className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+                        className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl"
                         data-aos="fade-up"
                         data-aos-delay="200"
                     >
-                        Let's connect and discuss how I can help with your next project
+                        Let's connect and discuss how I can help with your next project.
                     </p>
                 </div>
 

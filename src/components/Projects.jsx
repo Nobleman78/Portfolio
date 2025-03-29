@@ -73,13 +73,13 @@ export default function Projects() {
     return (
         <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-5xl font-bold mb-6 text-gray-800 dark:text-white">
+                <div className="mb-16">
+                    <h2 className="text-4xl font-bold mb-6 text-gray-800 dark:text-white">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">
                             Featured Projects
                         </span>
                     </h2>
-                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl ">
                         Showcase of my best work with modern technologies and clean code
                     </p>
                 </div>

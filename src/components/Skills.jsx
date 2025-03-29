@@ -41,13 +41,13 @@ export default function Skills() {
     return (
         <section id="skills" className="py-20 bg-white dark:bg-gray-900">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
-                    <h2 className="text-5xl font-bold mb-6 text-gray-800 dark:text-white">
+                <div className="mb-16">
+                    <h2 className="text-4xl font-bold mb-6 text-gray-800 dark:text-white">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">
                             My Skills
                         </span>
                     </h2>
-                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl">
                         Technologies I've mastered through projects and experience
                     </p>
                 </div>
