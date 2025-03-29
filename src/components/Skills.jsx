@@ -15,11 +15,7 @@ export default function Skills() {
             level: 90, 
             icon: <img src="https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" alt="Tailwind CSS" className="w-6 h-6" />
         },
-        { 
-            name: 'Node.js', 
-            level: 60, 
-            icon: <img src="https://cdn.worldvectorlogo.com/logos/nodejs-1.svg" alt="Node.js" className="w-6 h-6" />
-        },
+      
         { 
             name: 'HTML', 
             level: 95, 

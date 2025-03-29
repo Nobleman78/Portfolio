@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
-import { FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
+import { FiFacebook, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Tooltip } from 'react-tooltip';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -49,14 +50,14 @@ export default function Contact() {
     };
 
     return (
-        <section 
-            id="contact" 
+        <section
+            id="contact"
             className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-gray-900"
             data-aos="fade-up"
         >
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 
+                    <h2
                         className="text-5xl font-bold mb-6 text-gray-800 dark:text-white"
                         data-aos="fade-up"
                         data-aos-delay="100"
@@ -65,7 +66,7 @@ export default function Contact() {
                             Contact Me
                         </span>
                     </h2>
-                    <p 
+                    <p
                         className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
                         data-aos="fade-up"
                         data-aos-delay="200"
@@ -76,12 +77,12 @@ export default function Contact() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Contact Information */}
-                    <div 
+                    <div
                         className="bg-white dark:bg-gray-700/50 rounded-2xl p-8 shadow-lg backdrop-blur-sm"
                         data-aos="fade-right"
                         data-aos-delay="300"
                     >
-                        <h3 
+                        <h3
                             className="text-2xl font-bold mb-8 text-gray-800 dark:text-white"
                             data-aos="fade-up"
                             data-aos-delay="350"
@@ -90,7 +91,7 @@ export default function Contact() {
                         </h3>
 
                         <div className="space-y-6">
-                            <div 
+                            <div
                                 className="flex items-start gap-4"
                                 data-aos="fade-up"
                                 data-aos-delay="400"
@@ -104,12 +105,12 @@ export default function Contact() {
                                         href="mailto:your.email@example.com"
                                         className="text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors"
                                     >
-                                        your.email@example.com
+                                        jesminchakma39@gmail.com
                                     </a>
                                 </div>
                             </div>
 
-                            <div 
+                            <div
                                 className="flex items-start gap-4"
                                 data-aos="fade-up"
                                 data-aos-delay="450"
@@ -123,12 +124,12 @@ export default function Contact() {
                                         href="tel:+1234567890"
                                         className="text-gray-600 dark:text-gray-300 hover:text-blue-500 transition-colors"
                                     >
-                                        +8801687868698
+                                        +8801577095775
                                     </a>
                                 </div>
                             </div>
 
-                            <div 
+                            <div
                                 className="flex items-start gap-4"
                                 data-aos="fade-up"
                                 data-aos-delay="500"
@@ -139,49 +140,55 @@ export default function Contact() {
                                 <div>
                                     <h4 className="text-lg font-semibold text-gray-800 dark:text-white">Location</h4>
                                     <p className="text-gray-600 dark:text-gray-300">
-                                        Dhaka, Bangladesh
+                                        Kazipara,Dhaka, Bangladesh
                                     </p>
                                 </div>
                             </div>
                         </div>
 
                         {/* Social Links */}
-                        <div 
-                            className="mt-12"
-                            data-aos="fade-up"
-                            data-aos-delay="550"
-                        >
+                        {/* Social Links with Tooltips */}
+                        <div className="mt-12" data-aos="fade-up" data-aos-delay="550">
                             <h4 className="text-lg font-semibold mb-4 text-gray-800 dark:text-white">Follow Me</h4>
                             <div className="flex gap-4">
                                 {[
-                                    { icon: <FiLinkedin />, url: "https://linkedin.com/in/yourprofile", label: "LinkedIn" },
-                                    { icon: <FiGithub />, url: "https://github.com/yourusername", label: "GitHub" },
-                                    { icon: <FiTwitter />, url: "https://twitter.com/yourhandle", label: "Twitter" }
+                                    { icon: <FiLinkedin />, url: "https://www.linkedin.com/in/jesmin-chakma-a92250246/", label: "LinkedIn", id: "linkedin-tooltip" },
+                                    { icon: <FiGithub />, url: "https://github.com/Nobleman78", label: "GitHub", id: "github-tooltip" },
+                                    { icon: <FiFacebook />, url: "https://www.facebook.com/noble.chakma.71", label: "Facebook", id: "facebook-tooltip" }
                                 ].map((social, index) => (
-                                    <a
-                                        key={index}
-                                        href={social.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="p-3 rounded-full bg-gray-100 dark:bg-gray-600 hover:bg-blue-500 hover:text-white transition-all duration-300"
-                                        aria-label={social.label}
-                                        data-aos="zoom-in"
-                                        data-aos-delay={600 + (index * 100)}
-                                    >
-                                        {social.icon}
-                                    </a>
+                                    <>
+                                        <a
+                                            key={index}
+                                            href={social.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="p-3 rounded-full bg-gray-100 dark:bg-gray-600 hover:bg-blue-500 hover:text-white transition-all duration-300"
+                                            data-tooltip-id={social.id}
+                                            data-tooltip-content={social.label}
+                                            data-aos="zoom-in"
+                                            data-aos-delay={600 + (index * 100)}
+                                        >
+                                            {social.icon}
+                                        </a>
+                                        <Tooltip
+                                            id={social.id}
+                                            place="top"
+                                            effect="solid"
+                                            className="z-50"
+                                        />
+                                    </>
                                 ))}
                             </div>
                         </div>
                     </div>
 
                     {/* Contact Form */}
-                    <div 
+                    <div
                         className="bg-white dark:bg-gray-700/50 rounded-2xl p-8 shadow-lg backdrop-blur-sm"
                         data-aos="fade-left"
                         data-aos-delay="300"
                     >
-                        <h3 
+                        <h3
                             className="text-2xl font-bold mb-8 text-gray-800 dark:text-white"
                             data-aos="fade-up"
                             data-aos-delay="350"
@@ -191,7 +198,7 @@ export default function Contact() {
 
                         <form onSubmit={handleSubmit} className="space-y-6">
                             {submitStatus === 'success' && (
-                                <div 
+                                <div
                                     className="p-4 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-100 rounded-lg border border-green-200 dark:border-green-800"
                                     data-aos="fade-up"
                                 >
@@ -200,7 +207,7 @@ export default function Contact() {
                             )}
 
                             {submitStatus === 'error' && (
-                                <div 
+                                <div
                                     className="p-4 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-100 rounded-lg border border-red-200 dark:border-red-800"
                                     data-aos="fade-up"
                                 >
@@ -220,7 +227,7 @@ export default function Contact() {
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 transition"
+                                        className="w-full px-4 py-3 border outline-none shadow-none border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 transition"
                                         placeholder="Jesmin...."
                                     />
                                 </div>
@@ -236,7 +243,7 @@ export default function Contact() {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 transition"
+                                        className="w-full px-4 py-3 border outline-none shadow-none border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 transition"
                                         placeholder="jesmin@example.com"
                                     />
                                 </div>
@@ -252,7 +259,7 @@ export default function Contact() {
                                         value={formData.message}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 transition"
+                                        className="w-full px-4 py-3 outline-none shadow-none border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 bg-white dark:bg-gray-700 transition"
                                         placeholder="Hello, I would like to discuss..."
                                     ></textarea>
                                 </div>
@@ -261,9 +268,9 @@ export default function Contact() {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className={`w-full px-6 py-3 rounded-lg font-medium transition-all duration-300 ${isSubmitting
-                                                ? 'bg-gray-400 dark:bg-gray-600 cursor-not-allowed'
-                                                : 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-md hover:shadow-lg'
+                                        className={`w-full px-6 py-3 cursor-pointer rounded-lg font-medium transition-all duration-300 ${isSubmitting
+                                            ? 'bg-gray-400 dark:bg-gray-600 cursor-not-allowed'
+                                            : 'bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-md hover:shadow-lg'
                                             }`}
                                     >
                                         {isSubmitting ? (
