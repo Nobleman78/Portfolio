@@ -9,7 +9,10 @@ const Home = () => {
         Aos.init({
             duration:1000,
             once:false
-        })
+        },
+        Aos.refresh()
+    )
+        
     }, [])
 
 

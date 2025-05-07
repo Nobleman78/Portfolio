@@ -15,11 +15,11 @@ export default function Projects() {
     // All projects data
     const allProjects = [
         {
-            title: "Food Delivery App",
+            title: "Swaggy",
             description: "A full-featured food ordering platform with restaurant listings, cart functionality, and secure checkout.",
-            tags: ["React.js",  "Firebase", "Tailwind"],
-            link: "https://food-del-sage.vercel.app/",
-            github: "https://github.com/Nobleman78/Food-del",
+            tags: ["React.js",  "Firebase", "Tailwind","Stripe","TankStack Query","MongoDB","Node JS","Express JS"],
+            link: "https://swaggy-ten.vercel.app/",
+            github: "https://github.com/Nobleman78/Swaggy-Client",
             image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         },
         {
@@ -38,37 +38,12 @@ export default function Projects() {
             github: "https://github.com/Nobleman78/Spotify-Explore",
             image: "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         },
-        {
-            title: "Task Management App",
-            description: "A productivity app for organizing tasks with drag-and-drop functionality and team collaboration.",
-            tags: ["React", "Firebase",  "Tailwind CSS"],
-            link: "#",
-            github: "#",
-            image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-            title: "Weather Dashboard",
-            description: "Real-time weather forecasts with interactive maps and historical data visualization.",
-            tags: ["React", "OpenWeather API", "Chart.js", ],
-            link: "#",
-            github: "#",
-            image: "https://images.unsplash.com/photo-1601134467661-3d775b999c8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-            title: "Portfolio Template",
-            description: "A customizable portfolio template for developers with dark/light mode and animations.",
-            tags: ["Next.js", "Tailwind CSS", "Framer Motion", "AOS"],
-            link: "#",
-            github: "#",
-            image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        }
+    
     ];
 
     const [visibleProjects, setVisibleProjects] = useState(3);
 
-    const toggleProjects = () => {
-        setVisibleProjects(prev => prev === 3 ? allProjects.length : 3);
-    };
+  
 
     return (
         <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-900">
@@ -147,7 +122,7 @@ export default function Projects() {
                     ))}
                 </div>
 
-                {allProjects.length > 3 && (
+                {/* {allProjects.length > 3 && (
                     <div className="text-center mt-12" data-aos="fade-up">
                         <button
                             onClick={toggleProjects}
@@ -156,7 +131,7 @@ export default function Projects() {
                             {visibleProjects === 3 ? 'Show More Projects' : 'Show Less'}
                         </button>
                     </div>
-                )}
+                )} */}
             </div>
         </section>
     );
