@@ -5,15 +5,14 @@ import { Tooltip } from 'react-tooltip'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 const Home = () => {
+
     useEffect(() => {
         Aos.init({
-            duration:1000,
-            once:false
-        },
-        Aos.refresh()
-    )
-        
-    }, [])
+            duration: 1000,
+            once: false,
+        });
+        Aos.refresh();
+    }, []);
 
 
     return (

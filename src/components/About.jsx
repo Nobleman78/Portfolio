@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiUser, FiBook, FiAward, FiMail, FiMapPin, FiPhone } from 'react-icons/fi';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const About = () => {
     const [activeTab, setActiveTab] = useState('personal');
@@ -9,6 +11,14 @@ const About = () => {
         { id: 'education', label: 'Education', icon: <FiBook /> },
         { id: 'certificate', label: 'Certificates', icon: <FiAward /> }
     ];
+
+    useEffect(() => {
+        Aos.init({ duration: 1000, once: false });
+    }, []);
+
+    useEffect(() => {
+        Aos.refresh();
+    }, [activeTab]);
 
     return (
         <section
@@ -23,7 +33,7 @@ const About = () => {
                             About Me
                         </span>
                     </h2>
-                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-5xl  leading-relaxed">
+                    <p className="text-xl text-gray-600 dark:text-gray-300 max-w-5xl leading-relaxed">
                         Passionate front-end developer specializing in modern web technologies.
                         I create beautiful, functional digital experiences with clean code and
                         innovative solutions.
@@ -161,8 +171,6 @@ const About = () => {
                                 </div>
                             </div>
                         )}
-
-
                     </div>
                 </div>
             </div>

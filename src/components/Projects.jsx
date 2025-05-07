@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Aos from 'aos';
 
 export default function Projects() {
     // Initialize AOS animation library
@@ -8,8 +9,9 @@ export default function Projects() {
         AOS.init({
             duration: 800,
             easing: 'ease-in-out',
-            once: true
+            once: false
         });
+        Aos.refresh()
     }, []);
 
     // All projects data

@@ -1,4 +1,13 @@
+import React, { useEffect } from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 export default function Skills() {
+    useEffect(() => {
+        Aos.init({ duration: 1000, once: false });
+        Aos.refresh()
+    }, []);
+
     const skills = [
         { name: 'React', icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
         { name: 'Node.js', icon: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" },
@@ -13,9 +22,13 @@ export default function Skills() {
     ];
 
     return (
-        <section id="skills" className="py-20 bg-white dark:bg-gray-900">
+        <section
+            id="skills"
+            className="py-20 bg-white dark:bg-gray-900"
+            data-aos="fade-up"
+        >
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="mb-16 text-center">
+                <div className="mb-16 text-center" data-aos="fade-down">
                     <h2 className="text-4xl font-bold mb-6 text-gray-800 dark:text-white">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-400">
                             My Skills
@@ -28,9 +41,16 @@ export default function Skills() {
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
                     {skills.map((skill, index) => (
-                        <div key={index} className="bg-purple-50 dark:bg-gray-800 p-6 rounded-2xl shadow-md flex flex-col items-center hover:scale-105 transition-transform duration-300">
+                        <div
+                            key={index}
+                            className="bg-purple-50 dark:bg-gray-800 p-6 rounded-2xl shadow-md flex flex-col items-center hover:scale-105 transition-transform duration-300"
+                            data-aos="zoom-in"
+                            data-aos-delay={index * 100}
+                        >
                             <img src={skill.icon} alt={skill.name} className="w-12 h-12 mb-4" />
-                            <span className="text-lg font-semibold text-gray-800 dark:text-gray-100">{skill.name}</span>
+                            <span className="text-lg font-semibold text-gray-800 dark:text-gray-100">
+                                {skill.name}
+                            </span>
                         </div>
                     ))}
                 </div>

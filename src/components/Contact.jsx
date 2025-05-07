@@ -4,6 +4,7 @@ import { FiFacebook, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Tooltip } from 'react-tooltip';
+import Aos from 'aos';
 
 export default function Contact() {
     const [formData, setFormData] = useState({
@@ -19,8 +20,9 @@ export default function Contact() {
         AOS.init({
             duration: 800,
             easing: 'ease-in-out',
-            once: true
+            once: false
         });
+        AOS.refresh()
     }, []);
 
     const handleChange = (e) => {
