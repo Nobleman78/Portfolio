@@ -130,12 +130,12 @@ const About = () => {
                                         {
                                             title: 'Complete Web Development With Jangkhar Mahbub',
                                             provider: 'Programming Hero',
-                                            year: '2023'
+                                            year: '2024'
                                         },
                                         {
                                             title: 'SQL, MySQL, PostgreSQL & MongoDB: All-in-One Database Course',
                                             provider: 'Udemy',
-                                            year: '2023'
+                                            year: '2025'
                                         }
                                     ].map((cert, index) => (
                                         <div
