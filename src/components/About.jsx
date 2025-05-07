@@ -115,10 +115,7 @@ const About = () => {
 
                         {/* Certificates */}
                         {activeTab === 'certificate' && (
-                            <div
-                                className="text-center py-12"
-                                data-aos="zoom-in"
-                            >
+                            <div className="text-center py-12" data-aos="zoom-in">
                                 <div className="inline-flex p-5 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20 rounded-full mb-6">
                                     <FiAward className="text-4xl text-blue-600 dark:text-purple-400" />
                                 </div>
@@ -129,30 +126,43 @@ const About = () => {
                                     My certifications in web development and related technologies
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    {['Complete Web Development With Jangkhar Mahbub ', 'SQL, MYSQL, POSTGRESQL & MONGODB: All-in-One Database Course'].map((item) => (
+                                    {[
+                                        {
+                                            title: 'Complete Web Development With Jangkhar Mahbub',
+                                            provider: 'Programming Hero',
+                                            year: '2023'
+                                        },
+                                        {
+                                            title: 'SQL, MySQL, PostgreSQL & MongoDB: All-in-One Database Course',
+                                            provider: 'Udemy',
+                                            year: '2023'
+                                        }
+                                    ].map((cert, index) => (
                                         <div
-                                            key={item}
+                                            key={index}
                                             className="p-6 bg-white/80 dark:bg-gray-700/80 rounded-xl border border-gray-200 dark:border-gray-600 hover:shadow-lg transition-all duration-300"
                                             data-aos="fade-up"
-                                            data-aos-delay={item * 100}
+                                            data-aos-delay={index * 100}
                                         >
                                             <div className="text-blue-600 dark:text-purple-400 mb-4">
                                                 <FiAward className="text-3xl inline-block" />
                                             </div>
                                             <h4 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
-                                                Certificate Title {item}
+                                                {cert.title}
                                             </h4>
                                             <p className="text-gray-500 dark:text-gray-400 mb-3">
-                                                Programming Hero, Udemy
+                                                {cert.provider}
                                             </p>
                                             <span className="inline-block px-3 py-1 bg-blue-100 dark:bg-purple-900/30 text-blue-700 dark:text-purple-300 rounded-full text-sm">
-                                                2023
+                                                {cert.year}
                                             </span>
                                         </div>
                                     ))}
                                 </div>
                             </div>
                         )}
+
+
                     </div>
                 </div>
             </div>
