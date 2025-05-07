@@ -23,7 +23,7 @@ export default function Hero() {
                             data-aos="fade-up"
                             data-aos-delay="200"
                         >
-                            Frontend Web Developer
+                            Full Stack Web Developer
                         </h2>
                         <p
                             className="text-lg mb-8 text-gray-600 dark:text-gray-300"
@@ -31,7 +31,7 @@ export default function Hero() {
                             data-aos-delay="300"
                         >
                             A passionate developer specializing in modern web technologies.
-                            I build exceptional digital experiences with clean, efficient code.
+                            With a solid foundation in frontend and backend technologies, I specialize in crafting engaging user experiences and robust, scalable web applications.
                         </p>
                         <div
                             className="flex flex-wrap gap-4"
@@ -59,20 +59,20 @@ export default function Hero() {
                     </div>
 
                     {/* Photo - Right Side */}
-                    <div 
+                    <div
                         className="order-1 md:order-2 w-full md:w-auto"
                         data-aos="fade-left"
                         data-aos-delay="300"
                     >
                         <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-blue-500/10 shadow-xl">
                             {/* Replace with your actual photo */}
-                            
-                            <img 
-                              src={me}
+
+                            <img
+                                src={me}
                                 alt="Your Name"
                                 className="w-full h-full object-cover"
-                            /> 
-                          
+                            />
+
                         </div>
                     </div>
                 </div>
