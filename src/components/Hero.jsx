@@ -1,5 +1,5 @@
 import me from '../assets/Me.jpg'
-import resume from '../assets/Jesmin Chakma Resume (2).pdf'
+import resume from '../assets/Jesmin_Chakma__Resume.pdf'
 export default function Hero() {
     return (
         <section
@@ -23,7 +23,7 @@ export default function Hero() {
                             data-aos="fade-up"
                             data-aos-delay="200"
                         >
-                            Full Stack Web Developer
+                            Front-end Web Developer
                         </h2>
                         <p
                             className="text-lg mb-8 text-gray-600 dark:text-gray-300"
@@ -31,7 +31,7 @@ export default function Hero() {
                             data-aos-delay="300"
                         >
                             A passionate developer specializing in modern web technologies.
-                            With a solid foundation in frontend and backend technologies, I specialize in crafting engaging user experiences and robust, scalable web applications.
+                            With a solid foundation in frontend  technologies, I specialize in crafting engaging user experiences and robust, scalable web applications.
                         </p>
                         <div
                             className="flex flex-wrap gap-4"
