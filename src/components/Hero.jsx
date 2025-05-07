@@ -1,5 +1,5 @@
 import me from '../assets/Me.jpg'
-import resume from '../assets/Jesmin Chakma Resume.pdf'
+import resume from '../assets/Jesmin Chakma Resume (2).pdf'
 export default function Hero() {
     return (
         <section
