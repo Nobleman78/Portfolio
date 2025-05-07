@@ -129,7 +129,7 @@ const About = () => {
                                     My certifications in web development and related technologies
                                 </p>
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                    {[1, 2].map((item) => (
+                                    {['Complete Web Development With Jangkhar Mahbub ', 'SQL, MYSQL, POSTGRESQL & MONGODB: All-in-One Database Course'].map((item) => (
                                         <div
                                             key={item}
                                             className="p-6 bg-white/80 dark:bg-gray-700/80 rounded-xl border border-gray-200 dark:border-gray-600 hover:shadow-lg transition-all duration-300"
@@ -143,7 +143,7 @@ const About = () => {
                                                 Certificate Title {item}
                                             </h4>
                                             <p className="text-gray-500 dark:text-gray-400 mb-3">
-                                                Issuing Organization
+                                                Programming Hero, Udemy
                                             </p>
                                             <span className="inline-block px-3 py-1 bg-blue-100 dark:bg-purple-900/30 text-blue-700 dark:text-purple-300 rounded-full text-sm">
                                                 2023
