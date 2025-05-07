@@ -1,6 +1,9 @@
 export default function Skills() {
     const skills = [
         { name: 'React', icon: "https://cdn.worldvectorlogo.com/logos/react-2.svg" },
+        { name: 'Node.js', icon: "https://cdn.worldvectorlogo.com/logos/nodejs-icon.svg" },
+        { name: 'Express.js', icon: "https://cdn.worldvectorlogo.com/logos/express-109.svg" },
+        { name: 'MongoDB', icon: "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" },
         { name: 'JavaScript', icon: "https://cdn.worldvectorlogo.com/logos/javascript-1.svg" },
         { name: 'Tailwind CSS', icon: "https://cdn.worldvectorlogo.com/logos/tailwindcss.svg" },
         { name: 'HTML5', icon: "https://cdn.worldvectorlogo.com/logos/html-1.svg" },
